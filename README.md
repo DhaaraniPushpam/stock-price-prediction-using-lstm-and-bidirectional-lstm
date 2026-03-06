@@ -40,7 +40,7 @@ Open the `.ipynb` file and run all cells sequentially.
 | LSTM | — | — |
 | Bidirectional LSTM | — | — |
 
-> Update this table with your actual results after running the notebook.
+
 
 ## 🔍 Sample Output
 The model outputs a chart overlaying predicted stock prices against actual closing prices across the test period, showing how closely the model tracks real market movement.
