@@ -1,43 +1,54 @@
-# Stock Market Analysis and Prediction Using LSTM
+# 📈 Stock Price Prediction using LSTM & Bidirectional LSTM
 
-## Overview
-This project applies Long Short-Term Memory (LSTM) neural networks for stock market analysis and price prediction. It utilizes historical stock market data to train an LSTM model and forecast future stock prices.
+Predicting future stock prices using deep learning time-series models — comparing standard LSTM vs Bidirectional LSTM performance on real market data.
 
-## Features
-- Data preprocessing and visualization
-- LSTM-based time series forecasting
-- Model evaluation using loss metrics
-- Predictions plotted against actual data
+## 🛠️ Tech Stack
+- **Python 3.x** — core language
+- **TensorFlow / Keras** — LSTM and BiLSTM model architecture
+- **Pandas & NumPy** — data manipulation and preprocessing
+- **Matplotlib / Seaborn** — visualization of predictions vs actuals
+- **Scikit-learn** — MinMaxScaler for data normalization
+- **Jupyter Notebook** — interactive development and analysis
 
-## Dataset
-The dataset includes historical stock price data with the following fields:
-- Date
-- Open
-- High
-- Low
-- Close
-- Adj Close
-- Volume
+## 📌 What It Does
+- Fetches and preprocesses historical stock price data (OHLCV format)
+- Normalizes time-series data using MinMaxScaler for stable training
+- Builds and trains a standard **LSTM** model for sequential prediction
+- Builds and trains a **Bidirectional LSTM** model to capture both past and future context
+- Compares both models using RMSE and MAE evaluation metrics
+- Visualizes predicted vs actual prices with confidence intervals
 
-## Installation
-To run this project, install the required dependencies:
+## 🧠 Key Concepts Demonstrated
+- Time-series windowing (sequence length, look-back period)
+- Vanishing gradient problem and how LSTM solves it
+- Bidirectional processing — why it captures more temporal context
+- Overfitting prevention: Dropout layers, Early Stopping
+
+## 🚀 How to Run
 ```bash
-pip install numpy pandas matplotlib seaborn tensorflow scikit-learn
+git clone https://github.com/DhaaraniPushpam/stock-price-prediction-using-lstm-and-bidirectional-lstm
+cd stock-price-prediction-using-lstm-and-bidirectional-lstm
+pip install tensorflow pandas numpy matplotlib scikit-learn jupyter
+jupyter notebook
 ```
+Open the `.ipynb` file and run all cells sequentially.
 
-## Usage
-Run the Jupyter Notebook:
-```bash
-jupyter notebook stock_market_analysis_prediction_using_lstm.ipynb
-```
-Follow the notebook's instructions to preprocess the data, train the model, and visualize results.
+## 📊 Model Comparison
 
-## Results
-The trained LSTM model is evaluated using metrics such as Mean Squared Error (MSE) and plotted predictions for validation.
+| Model | RMSE | MAE |
+|---|---|---|
+| LSTM | — | — |
+| Bidirectional LSTM | — | — |
 
-## Future Improvements
-- Hyperparameter tuning for better accuracy
-- Integration with live stock market data
-- Implementation of other deep learning models (e.g., GRU, Transformer)
+> Update this table with your actual results after running the notebook.
 
+## 🔍 Sample Output
+The model outputs a chart overlaying predicted stock prices against actual closing prices across the test period, showing how closely the model tracks real market movement.
 
+## 📚 What I Learned
+- How LSTMs handle long-range dependencies in sequential data
+- The computational trade-off of Bidirectional vs standard LSTM
+- Real-world challenges: data leakage, look-ahead bias in financial ML
+
+---
+*Built as part of data science internship work and independent ML research.*
